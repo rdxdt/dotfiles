@@ -117,18 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 #custom aliases
-
-#scan analog radio frequencies
-alias gqrx-scan='gqrx-scanner -h 127.0.0.1 -p 7356 -m bookmark --tags "Desconhecidos|Identificados"'
-#scan digital radio frequencies
-alias gqrx-scan-dmr='gqrx-scanner -h 127.0.0.1 -p 7356 -m bookmark --tags "DMR"'
-#scan vhf range
-alias gqrx-scan-vhf='gqrx-scanner -h -m sweep -b 127000000 -e 176000000'
-# scan uhf range
-alias gqrx-scan-uhf='gqrx-scanner -h -m sweep -b 384000000 -e 524000000'
 #youtube-dl standard video download
-alias ytdl="youtube-dl -f mp4 --add-metadata -i"
+alias ytdl="yt-dlp -f mp4 --add-metadata -i"
 #youtube-dl download video as mp3
-alias yta="youtube-dl -i -x --audio-format mp3 --audio-auality 0"
-#control rgb led
-alias rgbctl="rgbledctlapp 192.168.1.171"
+alias yta="yt-dlp -i -x --audio-format mp3 --audio-quality 0"
